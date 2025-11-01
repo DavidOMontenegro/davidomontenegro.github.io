@@ -60,6 +60,10 @@ body {
     padding: 1rem;
 }
 
+#main h1 {
+    text-align: center;
+}
+
 #footer {
     display: flexbox;
     grid-area: footer;
@@ -73,8 +77,13 @@ body {
         display: flex;
         justify-content: space-around;
     }
+
     #header a {
         padding: 1em;
+    }
+
+    #main h1 {
+        font-size: 35px;
     }
 
     #footer {
@@ -87,6 +96,11 @@ body {
         display: flex;
         justify-content: space-around;
     }
+
+    #main h1 {
+        font-size: 35px;
+    }
+
     #header a {
         padding: 1em;
     }
@@ -101,6 +115,10 @@ body {
         padding: 1em;
     }
 
+    #main h1 {
+        font-size: 40px;
+    }
+
     #footer {
         text-align: left;
     }
@@ -111,6 +129,10 @@ body {
         padding: 1em;
     }
 
+    #main h1 {
+        font-size: 40px;
+    }
+
     #footer {
         text-align: left;
     }
@@ -119,6 +141,10 @@ body {
 @media only screen and (min-width: 1200px) {
     #header a {
         padding: 1em;
+    }
+
+    #main h1 {
+        font-size: 50px;
     }
 
     #footer {

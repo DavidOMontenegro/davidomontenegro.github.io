@@ -27,16 +27,11 @@ body {
 }
 
 #header {
+    display: flexbox;
     grid-area: header;
     background-color: var(--dark);
     color: var(--darkest);
     margin: 0;
-}
-
-#header nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 #header span.nav-item {
@@ -59,14 +54,14 @@ body {
 }
 
 #main {
+    display: flexbox;
     grid-area: main;
     min-height: 70vh;
-    max-width: 100%;
-    flex: 1;
     padding: 1rem;
 }
 
 #footer {
+    display: flexbox;
     grid-area: footer;
     background-color: var(--dark);
     color: var(--darkest);
@@ -74,8 +69,12 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+    #header nav {
+        display: flex;
+        justify-content: space-around;
+    }
     #header a {
-        padding: 100%;
+        padding: 1em;
     }
 
     #footer {
@@ -83,9 +82,13 @@ body {
     }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    #header nav {
+        display: flex;
+        justify-content: space-around;
+    }
     #header a {
-        padding: 100%;
+        padding: 1em;
     }
 
     #footer {
@@ -93,7 +96,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) {
     #header a {
         padding: 1em;
     }
@@ -103,7 +106,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
     #header a {
         padding: 1em;
     }

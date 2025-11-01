@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+    display: grid;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+    background-color: rgb(240, 208, 148);
+    gap: 10px;
+}
+
+header {
+    grid-area: header;
+    background-color: rgb(120, 48, 24);
+    color: rgb(50, 20, 10);
+    margin-bottom: 7px;
+}
+
+header nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header a {
+    padding: 8px;
+    text-align: center;
+}
+
+header a:hover {
+    background-color: rgb(150, 60, 30);
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(120, 48, 24);
+    color: rgb(50, 20, 10);
+    text-align: left;
+}

@@ -39,7 +39,7 @@ body {
     padding: 0;
 }
 
-#header .nav-item {
+#header span.nav-item {
     background-color: var(--light);
 }
 

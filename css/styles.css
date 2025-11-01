@@ -46,6 +46,7 @@ header a:hover {
 main {
     grid-area: main;
     flex: 1;
+    padding: 1rem;
 }
 
 footer {

@@ -1,68 +1,95 @@
 :root {
-    --darkest: rgb(50, 20, 10);
-    --dark: rgb(150, 60, 30);
-    --light: rgb(180, 100, 50);;
-    --lightest: rgb(240, 208, 148);
+    --color-text: #3B2A2A;
+    --color-primary: #A65D4B;
+    --color-secondary: #D9A066;
+    --color-plain: #FFF4E6;
+    --color-accent: #F28C4B;
+
+    --spacing-tiny: 0.5rem;
+    --spacing-small: 1rem;
+    --spacing-large: 2rem;
+    --spacing-huge: 3rem;
+
+    --font-body: 18px;
+    --font-h1-small: 36px;
+    --font-h1-medium: 42px;
+    --font-h1-large: 54px;
+    --font-footer: 1rem;
+
+    --radius-small: 4px;
+    --radius-large: 6px;
+
+    --shadow-header: 0 2px 8px rgba(0,0,0,0.15);
+    --shadow-hover: 0 8px 16px rgba(0,0,0,0.15);
 }
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 17px;
+    font-size: var(--font-body);
+    line-height: 1.6;
     display: grid;
     grid-template-areas:
-    'header'
-    'main'
-    'footer';
-    background-color: var(--lightest);
-    gap: 10px;
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-    min-width: 100vw;
-    max-width: 100vw;
-    margin: 0;
+    background-color: var(--color-plain);
     overflow-x: hidden;
 }
 
 #header {
-    display: flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     grid-area: header;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
     width: 100vw;
-    margin: 0;
-    background-color: var(--dark);
-    color: var(--darkest);
+    padding: var(--spacing-small) var(--spacing-large);
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    box-shadow: var(--shadow-header);
+    z-index: 1000;
 }
 
 #header span.nav-item {
-    background-color: var(--light);
+    background-color: var(--color-secondary);
+    border-radius: var(--radius-small);
+    padding: var(--spacing-tiny) var(--spacing-small);
 }
 
 #header a {
     display: inline-block;
-    background-color: var(--dark);
-    color: var(--darkest);
+    background-color: var(--color-primary);
+    color: var(--color-text);
     font-weight: bold;
     text-align: center;
     text-decoration: none;
+    padding: var(--spacing-tiny) var(--spacing-small);
+    border-radius: var(--radius-small);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #header a:hover {
     transform: scale(1.1);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-hover);
 }
 
 #main {
-    display: flexbox;
     grid-area: main;
     min-height: 70vh;
-    padding: 1rem;
+    padding: var(--spacing-huge);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-large);
 }
 
 #main h1 {
@@ -70,11 +97,10 @@ body {
 }
 
 #footer {
-    display: flexbox;
     grid-area: footer;
-    background-color: var(--dark);
-    color: var(--darkest);
-    padding: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: var(--spacing-large);
 }
 
 @media only screen and (max-width: 600px) {
@@ -83,12 +109,8 @@ body {
         justify-content: space-around;
     }
 
-    #header a {
-        padding: 1em;
-    }
-
     #main h1 {
-        font-size: 35px;
+        font-size: var(--font-h1-small);
     }
 
     #footer {
@@ -96,18 +118,14 @@ body {
     }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (min-width: 601px) and (max-width: 768px) {
     #header nav {
         display: flex;
         justify-content: space-around;
     }
 
     #main h1 {
-        font-size: 35px;
-    }
-
-    #header a {
-        padding: 1em;
+        font-size: var(--font-h1-small);
     }
 
     #footer {
@@ -115,13 +133,9 @@ body {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-    #header a {
-        padding: 1em;
-    }
-
+@media only screen and (min-width: 769px) and (max-width: 992px) {
     #main h1 {
-        font-size: 40px;
+        font-size: var(--font-h1-medium);
     }
 
     #footer {
@@ -129,13 +143,9 @@ body {
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-    #header a {
-        padding: 1em;
-    }
-
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
     #main h1 {
-        font-size: 40px;
+        font-size: var(--font-h1-medium);
     }
 
     #footer {
@@ -143,13 +153,9 @@ body {
     }
 }
 
-@media only screen and (min-width: 1200px) {
-    #header a {
-        padding: 1em;
-    }
-
+@media only screen and (min-width: 1201px) {
     #main h1 {
-        font-size: 50px;
+        font-size: var(--font-h1-large);
     }
 
     #footer {

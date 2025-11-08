@@ -81,6 +81,7 @@ body {
     padding: var(--spacing-huge);
     flex-direction: column;
     gap: var(--spacing-medium);
+    text-align: justify;
 }
 
 #main h1 {

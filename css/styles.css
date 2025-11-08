@@ -11,9 +11,9 @@
     --spacing-large: 1.5rem;
     --spacing-huge: 3rem;
 
-    --font-body-small: 18px;
-    --font-body-medium: 22px;
-    --font-body-large: 26px;
+    --font-body-small: 16px;
+    --font-body-medium: 20px;
+    --font-body-large: 24px;
     --font-h1-small: 32px;
     --font-h1-medium: 42px;
     --font-h1-large: 52px;
@@ -26,6 +26,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: var(--color-text);
 }
 
 body {
@@ -51,7 +52,6 @@ body {
     left: 0;
     width: 100vw;
     background-color: var(--color-primary);
-    color: var(--color-text);
     box-shadow: var(--shadow);
     z-index: 1000;
 }
@@ -94,9 +94,27 @@ body {
     gap: var(--spacing-large)
 }
 
-#main .card-grid .card {
-    border: 1px solid var(--color-primary);
+#main .card {
+    background-clip: padding-box;
+    border: var(--spacing-tiny) solid var(--color-primary);
+    border-radius: var(--spacing-large);
+    text-decoration: none;
+    overflow: hidden;
+}
+
+#main .card:hover {
+    box-shadow: var(--shadow);
+}
+
+#main .card > * {
     padding: var(--spacing-medium);
+}
+
+#main .card h6 {
+    background-color: var(--color-secondary);
+    font-size: var(--font-body-medium);
+    font-weight: bold;
+    text-align: center;
 }
 
 #footer {

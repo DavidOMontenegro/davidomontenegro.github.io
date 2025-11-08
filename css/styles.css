@@ -134,7 +134,7 @@ body {
     }
 
     #header a {
-        padding: var(--spacing-medium);
+        padding: var(--spacing-small);
         width: 25vw;
     }
 
@@ -158,7 +158,7 @@ body {
     }
 
     #header a {
-        padding: var(--spacing-medium);
+        padding: var(--spacing-small);
         width: 25vw;
     }
 
@@ -178,7 +178,7 @@ body {
 @media only screen and (min-width: 769px) and (max-width: 992px) {
     #header a {
         font-size: var(--font-body-medium);
-        padding: var(--spacing-large);
+        padding: var(--spacing-medium);
     }
 
     #main h1 {
@@ -197,7 +197,7 @@ body {
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
     #header a {
         font-size: var(--font-body-medium);
-        padding: var(--spacing-large);
+        padding: var(--spacing-medium);
     }
 
     #main h1 {

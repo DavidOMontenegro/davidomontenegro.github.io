@@ -52,7 +52,7 @@ body {
     width: 100vw;
     background-color: var(--color-primary);
     color: var(--color-text);
-    box-shadow: var(--shadow-header);
+    box-shadow: var(--shadow);
     z-index: 1000;
 }
 
@@ -79,7 +79,6 @@ body {
     grid-area: main;
     min-height: 70vh;
     padding: var(--spacing-huge);
-    display: flex;
     flex-direction: column;
     gap: var(--spacing-medium);
 }
@@ -87,6 +86,17 @@ body {
 #main h1 {
     text-align: center;
     margin-bottom: var(--spacing-huge);
+}
+
+#main .card-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--spacing-large)
+}
+
+#main .card-grid .card {
+    border: 1px solid var(--color-primary);
+    padding: var(--spacing-medium);
 }
 
 #footer {
@@ -114,6 +124,10 @@ body {
         font-size: var(--font-h1-small);
     }
 
+    #main .card {
+        grid-column: span 6;
+    }
+
     #footer {
         text-align: center;
     }
@@ -134,6 +148,10 @@ body {
         font-size: var(--font-h1-small);
     }
 
+    #main .card {
+        grid-column: span 3;
+    }
+
     #footer {
         text-align: center;
     }
@@ -147,6 +165,10 @@ body {
 
     #main h1 {
         font-size: var(--font-h1-medium);
+    }
+
+    #main .card {
+        grid-column: span 2;
     }
 
     #footer {
@@ -164,6 +186,10 @@ body {
         font-size: var(--font-h1-medium);
     }
 
+    #main .card {
+        grid-column: span 2;
+    }
+
     #footer {
         text-align: left;
     }
@@ -177,6 +203,10 @@ body {
 
     #main h1 {
         font-size: var(--font-h1-large);
+    }
+
+    #main .card {
+        grid-column: span 2;
     }
 
     #footer {

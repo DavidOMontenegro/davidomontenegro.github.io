@@ -28,9 +28,6 @@
     padding: 0;
     color: var(--color-text);
     text-justify: inter-word;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: normal;
 }
 
 body {

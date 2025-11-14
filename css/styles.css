@@ -126,6 +126,14 @@ body {
     text-align: center;
 }
 
+#main .admonition {
+    background-color: var(--color-accent);
+    background-clip: padding-box;
+    border: var(--spacing-tiny) solid var(--color-primary);
+    border-radius: var(--spacing-large);
+    overflow: hidden;
+}
+
 #footer {
     grid-area: footer;
     bottom: 0;

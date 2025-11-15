@@ -14,7 +14,7 @@
     --font-body-small: 16px;
     --font-body-medium: 20px;
     --font-body-large: 24px;
-    --font-h1-small: 36px;
+    --font-h1-small: 32px;
     --font-h1-medium: 42px;
     --font-h1-large: 52px;
     --font-footer: 1rem;
@@ -148,7 +148,8 @@ body {
     }
 
     #header a {
-        padding: var(--spacing-small);
+        font-size: var(--font-body-medium);
+        padding: var(--spacing-medium);
         width: 25vw;
     }
 
@@ -172,7 +173,8 @@ body {
     }
 
     #header a {
-        padding: var(--spacing-small);
+        font-size: var(--font-body-medium);
+        padding: var(--spacing-medium);
         width: 25vw;
     }
 

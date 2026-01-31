@@ -133,11 +133,14 @@ body {
 }
 
 #lang {
+    position: absolute;
     bottom: var(--spacing-large);
     left: var(--spacing-large);
     background-color: var(--color-accent);
-    padding: var(--spacing-medium);
-    border-radius: var(--spacing-small);
+    height: var(--spacing-huge);
+    width: var(--spacing-huge);
+    padding: auto;
+    border-radius: var(--spacing-medium);
 }
 
 #footer {
@@ -146,7 +149,7 @@ body {
     left: 0;
     background-color: var(--color-primary);
     color: var(--color-text);
-    padding: var(--spacing-large);
+    padding: var(--spacing-medium);
 }
 
 @media only screen and (max-width: 600px) {

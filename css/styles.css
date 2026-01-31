@@ -144,6 +144,7 @@ body {
     z-index: 999;
     border-radius: var(--spacing-large);
     cursor: pointer;
+    font-weight: bold;
 }
 
 #footer {

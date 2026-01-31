@@ -21,5 +21,5 @@ export function displayFlag() {
         console.error(`displayFlag: Localization button not found.`);
         return;
     }
-    button.innerHTML = window.location.href.includes("/en/") ? "EN" : "PT";
+    button.innerHTML = window.location.href.includes("/en/") ? "PT" : "EN";
 }

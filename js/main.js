@@ -4,21 +4,21 @@ async function init() {
         loadHTML('#header', `/components/header.html`),
         loadHTML('#footer', `/components/footer.html`)
     ]);
-    document.addEventListener("DOMContentLoaded", displayFlag);
     let button = document.querySelector('#lang');
     if (!button) {
         console.error(`init: Localization button not found.`);
         return;
     }
-    button.addEventListener("onClick", changeLanguage);
+    button.addEventListener("click", changeLanguage);
+    displayFlag();
 }
 function changeLanguage() {
     let href = window.location.href;
     if (href.includes("/en/")) {
-        href.replace("/en/", "/pt/");
+        href = href.replace("/en/", "/pt/");
     }
     else {
-        href.replace("/pt/", "/en/");
+        href = href.replace("/pt/", "/en/");
     }
     window.location.replace(href);
 }

@@ -24,5 +24,5 @@ export function displayFlag() {
     return;
   }
 
-  button.innerHTML = window.location.href.includes("/en/") ? "EN" : "PT";
+  button.innerHTML = window.location.href.includes("/en/") ? "PT" : "EN";
 }

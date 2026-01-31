@@ -133,14 +133,17 @@ body {
 }
 
 #lang {
-    position: absolute;
+    position: fixed;
     bottom: var(--spacing-large);
-    left: var(--spacing-large);
+    right: var(--spacing-large);
     background-color: var(--color-accent);
     height: var(--spacing-huge);
     width: var(--spacing-huge);
     padding: auto;
-    border-radius: var(--spacing-medium);
+    border: var(--spacing-tiny) solid var(--color-primary);
+    z-index: 999;
+    border-radius: var(--spacing-large);
+    cursor: pointer;
 }
 
 #footer {

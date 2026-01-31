@@ -1,25 +1,34 @@
-import { loadHTML } from './includes.js';
+import { displayFlag, loadHTML } from './includes.js';
 
 async function init() {
 
   await Promise.all([
     loadHTML('#header', `/components/header.html`),
-    loadHTML('#footer', `/components/footer.html`),
+    loadHTML('#footer', `/components/footer.html`)
   ]);
 
-  if (document.head) {
-    try {
-      const res = await fetch(`/components/head.html`);
-      if (res.ok) {
-        const html = await res.text();
-        document.head.insertAdjacentHTML('beforeend', html);
-      }
-    } catch (err) {
-      console.error(err);
-    }
+  document.addEventListener("DOMContentLoaded", displayFlag);
+
+  let button = document.querySelector<HTMLElement>('#lang');
+  if (!button) {
+    console.error(`init: Localization button not found.`);
+    return;
+  }
+  button.addEventListener("onClick", changeLanguage);
+}
+
+function changeLanguage() {
+
+  let href = window.location.href;
+
+  if (href.includes("/en/")) {
+    href.replace("/en/", "/pt/");
+  } else {
+    href.replace("/pt/", "/en/");
   }
 
-  console.log('Common layout loaded.');
+  window.location.replace(href);
+
 }
 
 init();

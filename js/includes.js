@@ -15,3 +15,11 @@ export async function loadHTML(selector, filePath) {
         console.error(err);
     }
 }
+export function displayFlag() {
+    const button = document.querySelector('#lang');
+    if (!button) {
+        console.error(`displayFlag: Localization button not found.`);
+        return;
+    }
+    button.innerHTML = window.location.href.includes("/en/") ? "&#127480;" : "&#127463;";
+}

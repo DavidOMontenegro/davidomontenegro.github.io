@@ -1,7 +1,8 @@
 import { displayFlag, loadHTML } from './includes.js';
 async function init() {
+    let href = window.location.href;
     await Promise.all([
-        loadHTML('#header', `/components/header.html`),
+        loadHTML('#header', href.includes("/en/") ? `/components/header.html` : `/components/header-pt.html`),
         loadHTML('#footer', `/components/footer.html`)
     ]);
     let button = document.querySelector('#lang');
@@ -9,11 +10,10 @@ async function init() {
         console.error(`init: Localization button not found.`);
         return;
     }
-    button.addEventListener("click", changeLanguage);
+    button.addEventListener("click", () => changeLanguage(href));
     displayFlag();
 }
-function changeLanguage() {
-    let href = window.location.href;
+function changeLanguage(href) {
     if (href.includes("/en/")) {
         href = href.replace("/en/", "/pt/");
     }

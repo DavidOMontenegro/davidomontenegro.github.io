@@ -10,6 +10,7 @@
     --spacing-medium: 1rem;
     --spacing-large: 1.5rem;
     --spacing-huge: 3rem;
+    --spacing-biggest: 6rem;
 
     --font-body-small: 16px;
     --font-body-medium: 20px;
@@ -95,6 +96,10 @@ body {
     margin-bottom: var(--spacing-huge);
 }
 
+#main h2 {
+    margin: var(--spacing-small) inherit;
+}
+
 #main .card-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -131,6 +136,10 @@ body {
     border: var(--spacing-tiny) solid var(--color-primary);
     border-radius: var(--spacing-large);
     overflow: hidden;
+}
+
+#main ul {
+    list-style-position: inside;
 }
 
 #lang {
@@ -213,6 +222,10 @@ body {
         padding: var(--spacing-medium);
     }
 
+    #main {
+        padding: var(--spacing-huge) var(--spacing-biggest);
+    }
+
     #main h1 {
         font-size: var(--font-h1-medium);
     }
@@ -232,6 +245,10 @@ body {
         padding: var(--spacing-medium);
     }
 
+    #main {
+        padding: var(--spacing-huge) var(--spacing-biggest);
+    }
+
     #main h1 {
         font-size: var(--font-h1-medium);
     }
@@ -249,6 +266,10 @@ body {
     #header a {
         font-size: var(--font-body-medium);
         padding: var(--spacing-large);
+    }
+
+    #main {
+        padding: var(--spacing-huge) var(--spacing-biggest);
     }
 
     #main h1 {

@@ -90,6 +90,7 @@ body {
 }
 
 #main h1 {
+    margin-top: var(--spacing-huge);
     text-align: center;
     margin-bottom: var(--spacing-huge);
 }
@@ -213,7 +214,6 @@ body {
     }
 
     #main h1 {
-        margin-top: var(--spacing-huge);
         font-size: var(--font-h1-medium);
     }
 
@@ -233,7 +233,6 @@ body {
     }
 
     #main h1 {
-        margin-top: var(--spacing-huge);
         font-size: var(--font-h1-medium);
     }
 
@@ -253,7 +252,6 @@ body {
     }
 
     #main h1 {
-        margin-top: var(--spacing-huge);
         font-size: var(--font-h1-large);
     }
 

@@ -142,6 +142,10 @@ body {
     list-style-position: inside;
 }
 
+#main .linkedin {
+    text-align: center;
+}
+
 #lang {
     position: fixed;
     bottom: var(--spacing-large);

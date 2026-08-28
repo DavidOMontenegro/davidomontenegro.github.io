@@ -120,13 +120,13 @@ body {
 
 #main .card > * {
     padding: var(--spacing-medium);
+    text-align: center;
 }
 
 #main .card h6 {
     background-color: var(--color-secondary);
     font-size: var(--font-body-medium);
     font-weight: bold;
-    text-align: center;
 }
 
 #main .admonition {

@@ -123,9 +123,17 @@ body {
     text-align: center;
 }
 
-#main .card h6 {
+#main .card .title {
     background-color: var(--color-secondary);
+}
+
+#main .card .title h4 {
     font-size: var(--font-body-medium);
+    font-weight: bold;
+}
+
+#main .card .title h5 {
+    font-size: var(--font-body-small);
     font-weight: bold;
 }
 
@@ -140,6 +148,10 @@ body {
 
 #main ul {
     list-style-position: inside;
+}
+
+#main li {
+    margin-bottom: var(--spacing-small);
 }
 
 #main .linkedin {

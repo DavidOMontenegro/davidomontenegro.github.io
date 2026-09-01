@@ -210,7 +210,7 @@ body {
 
     #main .card {
         grid-column: span 6;
-        flex: 0 0 47%;
+        flex: 0 0 98%;
     }
 
     #footer {
